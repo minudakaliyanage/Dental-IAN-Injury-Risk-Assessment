@@ -117,20 +117,33 @@ Removing ImageNet pre-training collapses accuracy to 53.85%, which confirms that
 ## 📂 Repository structure
 
 ```
-Final Notebooks/
-├── Segmentation/
-│   ├── U-Net/
-│   │   ├── UNet_ResNet50.ipynb                         # final IAN + M3M models
-│   │   ├── UNet_ResNet50_Ablation_Isolate.ipynb        # isolate-one-only ablation
-│   │   └── UNet_ResNet50_Ablation_Subtract_One_Out.ipynb
-│   └── YOLO/
+notebooks/
+├── segmentation/
+│   ├── unet/
+│   │   ├── UNet_ResNet50.ipynb                      # ⭐ final IAN + M3M models
+│   │   └── ablations/
+│   │       ├── UNet_ResNet50_Ablation_IsolateOne.ipynb
+│   │       └── UNet_ResNet50_Ablation_SubtractOne.ipynb
+│   └── yolo/
 │       ├── YOLOv8s_Baseline.ipynb
 │       ├── YOLOv8s_Improved.ipynb
-│       └── YOLO11m_seg.ipynb
-└── Classification/
-    ├── EfficientNet/   # B0 / B5 baselines, composite input, 7-ch CBAM, ablations
-    ├── DenseNet/       # DenseNet-121 baselines, composite input, 7-ch CBAM
-    └── ResNet/         # ResNet-50 baseline
+│       └── YOLO11m_Seg.ipynb
+└── classification/
+    ├── efficientnet/
+    │   ├── EfficientNetB0_Baseline.ipynb            # ⭐ best test accuracy
+    │   ├── EfficientNetB0_Composite.ipynb
+    │   ├── EfficientNetB0_7Ch_CBAM.ipynb
+    │   ├── EfficientNetB5_Baseline.ipynb
+    │   └── ablations/
+    │       ├── EfficientNetB0_Ablation_IsolateOne.ipynb
+    │       └── EfficientNetB0_Ablation_SubtractOne.ipynb
+    ├── densenet/
+    │   ├── DenseNet121_Baseline.ipynb
+    │   ├── DenseNet121_Composite.ipynb
+    │   └── DenseNet121_7Ch_CBAM.ipynb
+    └── resnet/
+        └── ResNet50_Baseline.ipynb
+assets/                                              # figures used in this README
 ```
 
 ## 🚀 Running the notebooks
